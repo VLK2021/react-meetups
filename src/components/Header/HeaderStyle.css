@@ -1,0 +1,21 @@
+.header {
+    padding: 0.5rem;
+    justify-content: space-around;
+    background: var(--bg-header);
+    box-sizing: border-box;
+}
+
+.header-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    color: var(--color-logo);
+}
+
+.header-ul {
+    font-size: 1.4rem;
+    color: var(--color-li-header);
+    gap: 1.2rem;
+    box-sizing: border-box;
+}

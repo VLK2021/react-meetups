@@ -1,0 +1,21 @@
+.addNewMeetup {
+    width: 40%;
+    padding: 0.1rem;
+    box-sizing: border-box;
+}
+
+.input-block {
+    margin-bottom: 1.5rem;
+}
+
+button {
+    width: 15rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    font-weight: bold;
+    border: none;
+    background: var(--bg-header);
+    color: var(--color-logo);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
