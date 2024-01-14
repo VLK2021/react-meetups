@@ -36,7 +36,7 @@ const AllMeetups = () => {
 
 
     return (
-        <main className={'allMeetups'}>
+        <main className={'allMeetups width flex-direction'}>
             {loadedMeetups.length > 0 &&
             loadedMeetups.map(meet => <Meetup key={meet.id} meet={meet}/>)
             }
