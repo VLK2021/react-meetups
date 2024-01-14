@@ -1,46 +1,30 @@
 import React, {useRef} from 'react';
 
-import './AddNewMeetupStyle.css';
+import './MeetupFormStyle.css';
 
 
-const AddNewMeetup = () => {
+const MeetupForm = ({addMeetupHandler}) => {
     const titleRef = useRef();
     const imageRef = useRef();
     const addressRef = useRef();
 
-    const addMeetupHandler = async (meetUp) => {
-        await fetch('https://react-meetup-e5ce3-default-rtdb.firebaseio.com/meetups.json',
-            {
-                method: 'POST',
-                body: JSON.stringify(meetUp),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-    }
-
-
     const handleSubmit = (event) => {
         event.preventDefault();
-
-        const currentTitle = titleRef.current.value;
-        const currentImage = imageRef.current.value;
-        const currentAddress = addressRef.current.value;
-
         const meetUp = {
-            title: currentTitle,
-            image: currentImage,
-            address: currentAddress
+            title: titleRef.current.value,
+            image: imageRef.current.value,
+            address: addressRef.current.value,
         };
 
         addMeetupHandler(meetUp);
-    }
+        titleRef.current.value = '';
+        imageRef.current.value = '';
+        addressRef.current.value = '';
+    };
 
 
     return (
-        <main className={'addNewMeetup flex-direction'}>
-            <h1 className={'width flex'}>Add New Meetup</h1>
-
+        <main className={'meetupForm'}>
             <form onSubmit={handleSubmit} className={'width flex-direction'}>
                 <div className={'width input-block'}>
                     <label htmlFor={'title'} className={'width'}>Meetup Title</label> <br/>
@@ -65,4 +49,4 @@ const AddNewMeetup = () => {
     );
 };
 
-export {AddNewMeetup};
+export {MeetupForm};

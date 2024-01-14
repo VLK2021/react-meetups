@@ -1,4 +1,3 @@
 export * from './Header/Header';
-export * from './AddNewMeetup/AddNewMeetup';
-export * from './AllMeetups/AllMeetups';
-export * from './MyFavorite/MyFavorite';
+export * from './MeetupForm/MeetupForm';
+export * from './Meetup/Meetup';

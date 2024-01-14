@@ -2,7 +2,7 @@ import {Routes, Route} from "react-router-dom";
 
 import './App.css';
 import {Layout} from "./Layout";
-import {AddNewMeetup, AllMeetups, MyFavorite} from "./components";
+import {AddNewMeetup, AllMeetups, MyFavorite} from "./pages";
 
 
 function App() {

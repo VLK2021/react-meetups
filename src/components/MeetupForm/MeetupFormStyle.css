@@ -1,7 +1,8 @@
-.addNewMeetup {
+.meetupForm{
     width: 40%;
-    padding: 0.1rem;
+    padding: 1rem 0.2rem;
     box-sizing: border-box;
+    border: 2px solid var(--bg-header);
 }
 
 .input-block {
