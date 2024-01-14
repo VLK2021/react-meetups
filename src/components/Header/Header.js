@@ -1,10 +1,14 @@
-import React from 'react';
-import { NavLink } from "react-router-dom";
+import React, {useContext} from 'react';
+import {NavLink} from "react-router-dom";
 
 import './HeaderStyle.css';
+import FavoriteContext from "../../store/favorite-context";
 
 
 const Header = () => {
+    const favoritesCtx = useContext(FavoriteContext);
+
+
     return (
         <main className={'header width flex'}>
             <h1 className={'header-title'}>React Meetups</h1>
@@ -18,8 +22,9 @@ const Header = () => {
                     <li>Add New Meetup</li>
                 </NavLink>
 
-                <NavLink to={'/my-favorite'}>
+                <NavLink to={'/my-favorite'} className={'flex'}>
                     <li>My Favorite</li>
+                    <span className={'total flex'}>{favoritesCtx.totalFavorites}</span>
                 </NavLink>
             </ul>
 
